@@ -31,7 +31,14 @@ subscribeButton.addEventListener('click', function () {
 });
 // TODO Implement subscribe function
 function subscribe() {
-
+    reg.pushManager.subscribe({
+        userVisibleOnly: true
+    }).then(function (pushSubscription) {
+        sub = pushSubscription;
+        console.log('Subscribed! endpoint:', sub.endpoint);
+        subscribeButton.textContent = 'Unsubscribe';
+        isSubscribed = true;
+    })
 }
 
 // TODO Implement unsubscribe function
