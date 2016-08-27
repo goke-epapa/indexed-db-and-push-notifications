@@ -44,3 +44,16 @@ self.addEventListener('activate',function(event){
 		}))
 	})
 });
+
+self.addEventListener('push', function (event) {
+	console.log('Push message received', event);
+	var title = 'Push Message';
+	// Show notification
+	event.waitUntil(
+		self.registration.showNotification(title, {
+			body: 'The Message',
+			icon: 'img/nn.min.png',
+			tag: 'my-tag'
+		})
+	);
+});
