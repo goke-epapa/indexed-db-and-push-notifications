@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="toast/build/toastr.css"/>
+    <link rel="stylesheet" href="css/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster' type='text/css'>
+    <link rel='stylesheet' href="css/app.css" type="text/css"/>
+    <link rel="icon" href="img/nn.min.png"/>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Gbolahan Alli">
+    <meta name="theme-color" content="#666">
+    <meta charset="utf-8">
+    <style type="text/css">
+        .login_Box {
+            position: relative;
+            z-index: 1000;
+        }
+
+        /*.mdl-textfield__input {border-bottom-color:#000;} */
+        .mdl-textfield__label {
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body class="container-fluid" style="padding:0 !important;">
+<!-- navigation panel -->
+<nav class="navbar navbar-default navbar-fixed-top menuBar">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a href="/" class="navbar-brand">GDG Ibadan</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#how">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Join Us</a></li>
+                <li class="active"></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- first section - Home -->
+<div id="home" class="home" style="margin-top:10vh;padding-left:15px; padding-right: 15px;">
+    <h3>TODOs</h3>
+    <!-- Remove dummy data and show todos from indexed db -->
+    <ul id="todos" class="list-group">
+        <li class="list-group-item">Attend IndexedDB and Push Notifications Event <span class="btn-link pull-right">Delete</span></li>
+        <li class="list-group-item">See a movie <span class="btn-link pull-right">Delete</span></li>
+        <li class="list-group-item">Build a robot <span class="btn-link pull-right">Delete</span></li>
+    </ul>
+    <div class="form-group">
+        <input id="input" type="text" class="form-control input-lg" placeholder="I want to"/>
+    </div>
+    <button onclick="addTodo()" class="btn btn-lg btn-success" id="addBtn">Add TODO</button>
+    <button onclick="clearAll()" class="btn btn-danger" id="clearBtn">Clear</button>
+</div>
+<div id="footer" class='navbar-fixed-bottom'>
+    <div class="container text-center">
+        <p class="muted credit">
+            <strong><a href='tel:+2348162514280'><i class='fa fa-phone-square'></i> 08162514280</a></strong><br>
+            <span class='social'>
+          <a href="https://www.twitter.com/gdgibadan"><i class='fa fa-twitter-square'></i></a>
+          <a href="https://bit.ly/gdgibadanplus"><i class='fa fa-google-plus-square'></i></a>
+          <a href="https://www.facebook.com/gdgibadan"><i class='fa fa-facebook-square'></i></a>
+         </span><br>
+        <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-xs-12">
+            <small style="font-size:80%;"> All Rights reserved 2016</small>
+        </div>
+        </p>
+    </div>
+</div>
+
+<script src="js/idb.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<script src="utilities/js/jquery-1.11.2.js"></script>
+<script src="utilities/js/bootstrap.min.js"></script>
+<script src="toast/build/toastr.min.js"></script>
+</body>
+</html>   

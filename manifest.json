@@ -1,0 +1,16 @@
+{
+	"short_name" : "GDG Ibadan",
+	"name" : "GDG Ibadan",
+	"icons" : [
+		{
+			"src" : "/gdgcodelab/img/nn.min.png",
+			"sizes" : "192x192",
+			"type" : "image/png"
+		}
+	],
+	"start_url" : "/gdgcodelab",
+	"display" : "standalone",
+	"theme_color" : "#666",
+	"background_color" : "#666"
+
+}
