@@ -57,3 +57,23 @@ self.addEventListener('push', function (event) {
 		})
 	);
 });
+
+self.addEventListener('notificationclick', function (event) {
+	console.log('Notification click: tag', event.notification.tag);
+	event.notification.close();
+	var url = 'https://attending.io/events/buildpwa-v2';
+	event.waitUntil(
+		clients.matchAll({
+			type: 'window'
+		}).then(function (windowClients) {
+			windowClients.forEach(function (client) {
+				if (client.url == url && 'focus' in client) {
+					return client.focus();
+				}
+			});
+			if (clients.openWindow) {
+				return clients.openWindow(url);
+			}
+		})
+	);
+});
