@@ -27,9 +27,15 @@ subscribeButton.addEventListener('click', function () {
         subscribe();
     }
 });
-// TODO Create subscribe function
+// TODO Implement subscribe function
+function subscribe() {
 
-// TODO Create unsubscribe function
+}
+
+// TODO Implement unsubscribe function
+function unsubscribe() {
+
+}
 
 var indexedDbEngine = new IndexedDBEngine(dbName, dbVersion);
 
