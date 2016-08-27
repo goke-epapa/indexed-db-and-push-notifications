@@ -16,6 +16,8 @@ if ('serviceWorker' in navigator) {
         console.log(':^)', serviceWorkerRegistration);
         // TODO Assign serviceWorkerRegistration to reg variable
         // TODO Set subscribe button disabled attribute to false
+        reg = serviceWorkerRegistration;
+        subscribeButton.disabled = false;
     }).catch(function (err) {
         console.log(':^(', err);
     });
