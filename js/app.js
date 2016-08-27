@@ -43,7 +43,14 @@ function subscribe() {
 
 // TODO Implement unsubscribe function
 function unsubscribe() {
-
+    sub.unsubscribe().then(function (event) {
+        subscribeButton.textContent = 'Subscribe';
+        console.log('Unsubscribed!', event);
+        isSubscribed = false;
+    }).catch(function (error) {
+        console.log('Error unubscribing', error);
+        subscribeButton.textContent = 'Subscribe';
+    })
 }
 
 var indexedDbEngine = new IndexedDBEngine(dbName, dbVersion);
