@@ -22,7 +22,13 @@ if ('serviceWorker' in navigator) {
         console.log(':^(', err);
     });
 }
-
+subscribeButton.addEventListener('click', function () {
+    if (isSubscribed) {
+        unsubscribe();
+    } else {
+        subscribe();
+    }
+});
 // TODO Create subscribe function
 
 // TODO Create unsubscribe function
