@@ -1,4 +1,4 @@
-var cacheName = 'gdg-codedlab-cache-v1';
+var cacheName = 'gdg-codelab-cache-v1';
 var filesToCache = [
 	'/',
 	'/index.html',
@@ -36,7 +36,7 @@ self.addEventListener('fetch', function(event){
 self.addEventListener('activate',function(event){
 	caches.keys().then(function(keylist){
 		return Promise.all(keylist.filter(function(cache) {
-			return cache.startsWith('lemz-') && cache != cacheName;
+			return cache.startsWith('gdg-') && cache != cacheName;
 		}).map(function(key){
 			if(key != cacheName) {
 				return caches.delete(key);
